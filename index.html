@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Site pessoal de estudos do Luiz Renato - repositórios, vídeos e códigos.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
@@ -218,6 +219,120 @@
             transform: scale(1.04);
             transition: 0.2s;
         }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 768px) {
+
+            article.geral,
+            .sub-videos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            li {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .individual,
+            .individual-videos,
+            .individual-codigos {
+                width: 80%;
+                height: auto;
+            }
+
+            .individual-videos img {
+                width: 60%;
+                height: auto;
+                margin: 0;
+            }
+
+            .sub-videos,
+            .geral {
+                gap: 1em;
+            }
+
+            .videos {
+                padding: 0;
+                margin: 0;
+
+            }
+
+            .botao {
+                width: 50%;
+                margin: auto;
+                padding: 0.5em;
+                font-size: 1em;
+
+            }
+            article.individual-codigos {
+                width: 80%;
+                height: auto;
+            }
+            article.individual {
+                width: 80%;
+                height: auto;
+            }
+            article.individual-videos {
+                width: 80%;
+                height: auto;
+            }
+            nav{
+                height: auto;
+                padding: 1em 0;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+            .individual-videos img {
+                width: 80%;
+                height: auto;
+                margin: 0;
+                max-width: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0%;
+            }
+        }
+        @media (max-width: 320px) {
+            .individual-videos img {
+                width: 100%;
+                height: auto;
+                margin: 0;
+                max-width: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0%;
+            }
+        }
+        @media (min-width: 1200px) {
+            article.geral,
+            .sub-videos {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        @media (770px <= width <= 1199px) {
+            article.geral,
+            .sub-videos {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .individual, .individual-videos, .individual-codigos {
+                width: 40%;
+                height: auto;
+                margin-bottom: 1em;
+            }
+        }
     </style>
 </head>
 
@@ -323,7 +438,7 @@
             </article>
             <article class="individual-codigos">
                 <h4>HTML e CSS - Básico</h4>
-                <p>-> ChatGPT - HTML e CSS Básico; <br>-> Para tirar dúvidas e aprender mais sobre a linguagem.
+                <p> -> ChatGPT - HTML e CSS Básico; <br>-> Para tirar dúvidas e aprender mais sobre a linguagem.
 
                 </p>
                 <a href="https://chatgpt.com/share/68dd69f1-0cdc-8009-817f-c6e243609b2c" class="botao">Acessar</a>
@@ -333,8 +448,8 @@
                 <p>-> ChatGPT - Lógica de programação; <br>-> Para tirar dúvidas e aprender mais sobre lógica de
                     programação.
                 </p>
-                <a href="https://chatgpt.com/share/68dd6c8e-7f4e-8009-8f3e-0f5f5e4e1f5e" class="botao">Acessar</a
-             </article>
+                <a href="https://chatgpt.com/share/68dd6c8e-7f4e-8009-8f3e-0f5f5e4e1f5e" class="botao">Acessar</a>
+            </article>
             </article>
     </section>
 
