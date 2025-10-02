@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* NAVEGADOR - NAV */
+        nav {
+            background-color: #314256;
+            height: 5em;
+            width: auto;
+        }
+
+
+        a {
+            text-align: center;
+            text-decoration: none;
+        }
+
+        li>a {
+            color: white;
+            font-size: 1.2em;
+            line-height: 4em;
+            padding: auto;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul:not(.individual>ul) {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            width: 8em;
+            height: 5em;
+        }
+
+        li:hover:not(.individual>ul>li) {
+            background-color: #1b2738;
+            transition: 0.5s;
+        }
+
+        /* FIM DO NAV */
+
+        /* REPOSITÓRIOS */
+        section#repositorios {
+            background-color: #dcdcdc;
+            margin: 5em;
+            display: block;
+            padding: 1em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        article.geral {
+            display: flex;
+            justify-content: space-around;
+            margin: 0.5em;
+            gap: 2em;
+            padding: 0.5em;
+
+        }
+
+        header>h3 {
+            font-size: 40px;
+            margin-left: 1em;
+        }
+
+        article.individual {
+            background-color: white;
+            padding: 1em;
+            border-radius: 10px;
+            width: 20em;
+            height: 10em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .individual:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        article.individual>h4 {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .individual>p {
+            margin: 0.5em;
+        }
+
+        .individual>a.botao {
+            margin-top: 0.5em;
+            display: flex;
+            justify-content: center;
+            background-color: #314256;
+            color: white;
+            padding: 0.5em;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .individual>a:hover.botao {
+            background-color: #1b2738;
+            transition: 0.5s;
+        }
+
+        /* FIM DOS REPOSITÓRIOS */
+
+        /* Vídeos */
+        section#videos {
+            background-color: #dcdcdc;
+            margin: 5em;
+            display: block;
+            padding: 1em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        article.individual-videos {
+            background-color: white;
+            padding: 1em;
+            border-radius: 10px;
+            width: 30em;
+            height: 17em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article.individual-videos>img {
+            display: block;
+            margin-left: 4.5em;
+            border: none;
+            border-radius: 10px;
+
+        }
+
+        .individual-videos>a.botao {
+            margin-top: 0.5em;
+            display: flex;
+            justify-content: center;
+            background-color: #314256;
+            color: white;
+            padding: 0.5em;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .individual-videos>a:hover.botao {
+            background-color: #1b2738;
+            transition: 0.5s;
+        }
+
+        .individual-videos:hover {
+            transform: scale(1.04);
+            transition: 0.2s;
+        }
+
+        .sub-videos {
+            display: flex;
+            justify-content: space-around;
+            margin: 0.5em;
+            gap: 2em;
+            padding: 0.5em;
+        }
+
+        /* FIM DE VÍDEOS */
+
+        /* CÓDIGOS */
+
+        article.individual-codigos {
+            background-color: white;
+            padding: 1em;
+            border-radius: 10px;
+            width: 15em;
+            height: 12em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section#codigos {
+            background-color: #dcdcdc;
+            margin: 5em;
+            display: block;
+            padding: 1em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .individual-codigos>a.botao {
+            margin-top: 0.5em;
+            display: flex;
+            justify-content: center;
+            background-color: #314256;
+            color: white;
+            padding: 0.5em;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .individual-codigos>a:hover.botao {
+            background-color: #1b2738;
+            transition: 0.5s;
+        }
+
+        .individual-codigos:hover {
+            transform: scale(1.04);
+            transition: 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="principal">
+        <nav>
+            <ul>
+                <li><a href="#repositorios">Repositórios</a></li>
+                <li><a href="#videos">Vídeos</a></li>
+                <li><a href="#codigos">Códigos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="repositorios">
+        <header>
+            <h3>Repositórios</h3>
+        </header>
+        <article class="geral">
+            <article class="individual">
+                <h4>E-books gratuitos</h4>
+                <p>-> Curso gratis; <br>-> Framesworks; <br>-> Tutorias;</p>
+
+                <a href="https://github.com/aluismoya/EbookFoundation-free-programming-books" class="botao">
+                    Acessar
+                </a>
+            </article>
+
+            <article class="individual">
+                <h4>Commit semânticos</h4>
+                <p>-> Guia de boas práticas para escrever mensagens de commit claras e informativas.</p>
+
+                <a href="https://github.com/AdrianaSaty/colinha-commit-semantico" class="botao">
+                    Acessar
+                </a>
+            </article>
+
+            <article class="individual">
+                <h4>Apis</h4>
+                <p>-> Para você que está procurando por APIs gratuitas e abertas para seus projetos.</p>
+                <a href="https://github.com/public-apis/public-apis" class="botao">
+                    Acessar
+                </a>
+            </article>
+
+            <article class="individual">
+                <h4>Roadmaps</h4>
+                <p>-> Mapas de aprendizado para várias carreiras em desenvolvimento web.</p>
+                <a href="https://github.com/kamranahmedse/developer-roadmap" class="botao">
+                    Acessar
+                </a>
+            </article>
+        </article>
+    </section>
+
+    <section id="videos">
+        <header>
+            <h3>Vídeos</h3>
+        </header>
+        <section class="sub-videos">
+            <article class="individual-videos">
+                <img src="img/intro-prog-cpp.png" alt="" height="180px" width="auto">
+                <h4>C++</h4>
+                <p>Curso completo de C++ do básico ao avançado.</p>
+
+                <a href="https://www.youtube.com/watch?v=nUQKr-ey86Y&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40"
+                    class="botao">Acessar</a>
+            </article>
+            <article class="individual-videos">
+                <img src="img/javascript-01.png" alt="" height="180px" width="auto">
+                <h4>Javascript - Curso em vídeo</h4>
+                <p>Curso completo de Javascript do básico ao avançado.</p>
+                <a href="https://youtu.be/Ptbk2af68e8?si=1B7EJk9OlfEOrcNQ" class="botao">Acessar</a>
+            </article>
+        </section>
+        <section class="sub-videos">
+            <article class="individual-videos">
+                <img src="img/algoritmos.png" alt="" height="180px" width="auto">
+                <h4>Introdução a Algoritmos</h4>
+                <p> Curso de Algoritmos #01 - Gustavo Guanabara</p>
+                <a href="https://youtu.be/8mei6uVttho?si=4-2zK9Qb4ZrnKBX_" class="botao">Acessar</a>
+            </article>
+            <article class="individual-videos">
+                <img src="img/algoritmo-02.png" alt="" height="180px" width="auto">
+                <h4>ALGORITMOS</h4>
+                <p>ALGORITMOS de um jeito fácil de entender (+ exemplos práticos)</p>
+                <a href="https://youtu.be/D9DsLAoHt5U?si=zC0qXuA4Oe5ItY8l" class="botao">Acessar</a>
+            </article>
+        </section>
+    </section>
+
+    <section id="codigos">
+        <header>
+            <h3>Códigos - Chats</h3>
+        </header>
+        <article class="geral">
+            <article class="individual-codigos">
+                <h4>C++ - Básico e intermediário</h4>
+                <p>
+                    -> ChatGPT - C++ Básico e intermediário; <br>-> Para tirar dúvidas e aprender mais sobre a
+                    linguagem.
+                </p>
+                <a href="https://chatgpt.com/share/68dd64d9-d7d0-8009-a708-b682d14660c1" class="botao">Acessar</a>
+            </article>
+            <article class="individual-codigos">
+                <h4>HTML e CSS - Básico</h4>
+                <p>-> ChatGPT - HTML e CSS Básico; <br>-> Para tirar dúvidas e aprender mais sobre a linguagem.
+
+                </p>
+                <a href="https://chatgpt.com/share/68dd69f1-0cdc-8009-817f-c6e243609b2c" class="botao">Acessar</a>
+            </article>
+            <article class="individual-codigos">
+                <h4>Lógica de programação</h4>
+                <p>-> ChatGPT - Lógica de programação; <br>-> Para tirar dúvidas e aprender mais sobre lógica de
+                    programação.
+                </p>
+                <a href="https://chatgpt.com/share/68dd6c8e-7f4e-8009-8f3e-0f5f5e4e1f5e" class="botao">Acessar</a
+             </article>
+            </article>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 1em; background-color: #314256; color: white;">Feito por Luiz Renato</p>
+    </footer>
+
+</body>
+
+</html>
