@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Site pessoal de estudos do Luiz Renato - repositórios, vídeos e códigos.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Estudos Tech</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -221,116 +222,122 @@
         }
 
         /* RESPONSIVIDADE */
-
-        @media (max-width: 768px) {
-
-            article.geral,
-            .sub-videos {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            li {
-                width: 100%;
-                text-align: center;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            .individual,
-            .individual-videos,
-            .individual-codigos {
-                width: 80%;
-                height: auto;
-            }
-
-            .individual-videos img {
-                width: 60%;
-                height: auto;
-                margin: 0;
-            }
-
-            .sub-videos,
-            .geral {
-                gap: 1em;
-            }
-
-            .videos {
-                padding: 0;
-                margin: 0;
-
-            }
-
-            .botao {
-                width: 50%;
-                margin: auto;
-                padding: 0.5em;
-                font-size: 1em;
-
-            }
-            article.individual-codigos {
-                width: 80%;
-                height: auto;
-            }
-            article.individual {
-                width: 80%;
-                height: auto;
-            }
-            article.individual-videos {
-                width: 80%;
-                height: auto;
-            }
+        /* celulares */
+        @media (max-width: 767px) {
             nav{
-                height: auto;
-                padding: 1em 0;
                 display: flex;
                 justify-content: center;
                 align-content: center;
+                width: 53em;
             }
-            .individual-videos img {
-                width: 80%;
+            #repositorios,
+            #videos, #codigos {
                 height: auto;
-                margin: 0;
-                max-width: max-content;
-                display: flex;
+                width: 40em;
+            }
+            article.geral{
+                flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
-                padding: 0%;
+            }
+            section.sub-videos{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            footer{
+                width: 53em;
             }
         }
-        @media (max-width: 320px) {
-            .individual-videos img {
-                width: 100%;
-                height: auto;
-                margin: 0;
-                max-width: max-content;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0%;
-            }
-        }
-        @media (min-width: 1200px) {
+
+        @media (min-width: 1024px) {
+
             article.geral,
             .sub-videos {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-        }
-        @media (770px <= width <= 1199px) {
-            article.geral,
-            .sub-videos {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .individual, .individual-videos, .individual-codigos {
-                width: 40%;
+
+            .article.individual,
+            .individual-videos,
+            .individual-codigos {
+                width: 30%;
                 height: auto;
                 margin-bottom: 1em;
+            }
+
+            .individual-videos img {
+                width: 65%;
+                height: auto;
+                margin: 0;
+                max-width: max-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0%;
+            }
+
+        }
+
+        /* tablets */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            nav {
+                background-color: #314256;
+                height: 5em;
+                width: 63.2em;
+            }
+
+            a {
+                text-align: center;
+                text-decoration: none;
+            }
+
+            li>a {
+                color: white;
+                font-size: 1.2em;
+                line-height: 4em;
+                padding: auto;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            ul:not(.individual>ul) {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                width: 8em;
+                height: 5em;
+            }
+
+            li:hover:not(.individual>ul>li) {
+                background-color: #1b2738;
+                transition: 0.5s;
+            }
+
+            #repositorios,
+            #videos,
+            #codigos {
+                margin: 5em;
+                width: 50em;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            article.individual {
+                width: 40em;
+                height: auto;
+                margin-bottom: 1em;
+            }
+
+            section.sub-videos {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            footer {
+                width: 63.2em;
             }
         }
     </style>
@@ -450,11 +457,13 @@
                 </p>
                 <a href="https://chatgpt.com/share/68dd6c8e-7f4e-8009-8f3e-0f5f5e4e1f5e" class="botao">Acessar</a>
             </article>
-            </article>
+        </article>
     </section>
 
     <footer>
-        <p style="text-align: center; padding: 1em; background-color: #314256; color: white;">Feito por Luiz Renato</p>
+        <p
+            style="text-align: center; padding: 1em; background-color: #314256; color: white; font-weight: 700; font-style: italic;">
+            Feito por Luiz Renato</p>
     </footer>
 
 </body>
